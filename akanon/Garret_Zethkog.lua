@@ -5,7 +5,7 @@ function event_spawn(e)
 end
 
 function event_enter(e)
-	if(e.other:HasItem(18434) == true) then
+	if(e.other:HasItem(18434) == true) then -- Item: Gnome Shadowknight Note
 		e.other:Message(15,"A diminutive, but powerful looking gnome stands before you. 'I am Garret Zethkog. The Dark Reflection has called you. Read the note in your inventory and hand it to me when you wish to begin your training. Your destiny awaits!'");
 	end
 end
@@ -31,7 +31,7 @@ end
 
 function event_trade(e)
 	local item_lib = require("items");
-	if (item_lib.check_turn_in(e.trade, {item1 = 10991})) then
+	if (item_lib.check_turn_in(e.trade, {item1 = 10991})) then -- Item: Donlix's Short Sword
 		e.self:Say("Ah! Donlix's sword! You have done well to bring this to me... but oh! Look at your corruption seep into it. I think now this sword belongs to you. Use it well.");
 		e.other:SummonItem(11078); -- Item: Plague Knight Short Sword
 		e.other:Ding();

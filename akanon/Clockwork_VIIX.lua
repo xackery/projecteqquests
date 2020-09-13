@@ -2,6 +2,9 @@
 -- Converted to .lua by Speedz
 
 function event_say(e)
+	if (not eq.is_the_ruins_of_kunark_enabled()) then
+		return 0;
+	end
 	if (e.message:findi("are you mizzle")) then
 		e.self:Say("Oh hello! I'm Mizzle, that I am. I bet you want to be given true clarity, don't you?");
 	elseif (e.message:findi("i am ready to collect")) then
